@@ -1,0 +1,23 @@
+{
+  "name": "koa-restful-api",
+  "version": "1.0.0",
+  "description": "restful api use koa",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "zhang",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.2.1",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
+    "mongoose": "^5.0.15",
+    "nodemon": "^1.17.3"
+  }
+}
