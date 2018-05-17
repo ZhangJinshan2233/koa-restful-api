@@ -17,7 +17,9 @@ module.exports=()=>{
         ctx.set("Access-Control-Max-Age", 300);
         
         ctx.set("Access-Control-Expose-Headers", "myData");
-    
+
+        ctx.status=200;
+        
         await next();
     }
 }

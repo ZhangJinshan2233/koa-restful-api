@@ -7,10 +7,9 @@ module.exports={
         try{
             const user= await models.User.find({email:ctx.req.body.email}).exec();
             if(user.length>=1){
-                    return ctx.json({
-                        status:409,
-                        message:"user existed"
-                    })
+                    return [ ctx.status=409,ctx.json({
+                             message:"user existed"
+                    })]
             }else{
                 const hashPassword= await  bcyrptjs.hash(ctx.req.body.password,10);
                 const newUser=new models.User({
@@ -95,6 +94,5 @@ module.exports={
         }
 
     }
-
 
 }
